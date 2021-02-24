@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  background: black;
+}
+
+html {
+  min-height: 100vh;
+  font-family: "Sue Ellen Francisco", cursive;
+  color: aliceblue;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+table th {
+  font-size: 5vw;
+}
+table td {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 5vw;
+}
+
+.page-title {
+  font-weight: normal;
+  text-align: center;
+  font-size: 3vw;
+}
+
+input[type=button] {
+  width: 50%;
+  flex: 1;
+  padding: 0.1vw 10vw;
+  margin: 0.5vw;
+  border-radius: 0.2vw;
+  border: 0.1vw solid aliceblue;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 2vw;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0);
+  text-align: center;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  background-repeat: repeat-x;
+  background-position: 0 -100%;
+  transition: 1.5s ease;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10em;
+  }
+}
+.game-area {
+  /*     .other-buttons{
+
+          div{
+              display: none;
+              &.visible{
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  width: 10rem;
+                  justify-content: space-between;
+                  padding: 10px;
+                  input[type = button]{
+                      width: 50%;
+                      flex: 1;
+                      padding: 0.1vw 10vw;
+                      margin: 0.5vw;
+                      border-radius: 0.2vw;
+                      border: 0.1vw solid aliceblue;
+                      font-family: 'Sue Ellen Francisco', cursive;
+                      font-size: 2vw;
+                      text-shadow: 0 3px 5px rgba(0,0,0,0);
+                      text-align: center;
+                      white-space: nowrap;
+                      color: #fff;
+                      cursor: pointer;
+                      user-select: none;
+                      background: transparent;
+                      background-repeat: repeat-x;
+                      background-position: 0 -100%;
+                      transition: 1.5s ease;
+                  }
+              }
+          }
+      }
+
+      .score{
+          text-align: center;
+          font-size: 3vw;
+      } */
+}
+.game-area .menu {
+  justify-content: center;
+  text-align: center;
+}
+.game-area .menu p, .game-area .menu label {
+  font-weight: normal;
+  text-align: center;
+  font-size: 3vw;
+}
+.game-area .menu label {
+  margin: 1vw;
+}
+.game-area .menu .rules {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: red;
+}
+.game-area .menu .rules.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+  transition: all 0.3s ease-in-out;
+}
+.game-area .menu .rules.visible iframe {
+  background-color: grey;
+}
+.game-area .menu .main-menu {
+  display: none;
+}
+.game-area .menu .main-menu.visible {
+  display: contents;
+}
+.game-area .menu .play-menu {
+  display: none;
+}
+.game-area .menu .play-menu.visible {
+  display: contents;
+}
+.game-area .menu .play-menu .players-name input[name=playersName] {
+  display: none;
+}
+.game-area .menu .play-menu .players-name input[name=playersName].visible {
+  display: inline;
+  align-items: center;
+}
+.game-area .menu .play-menu .next {
+  display: none;
+}
+.game-area .menu .play-menu .next.visible {
+  display: contents;
+}
+.game-area .menu .other-options {
+  display: none;
+}
+.game-area .menu .other-options.visible {
+  display: contents;
+}
+.game-area .menu .start {
+  display: none;
+}
+.game-area .menu .start.visible {
+  display: contents;
+}
+.game-area .menu input[type=textarea] {
+  width: 10%;
+  flex: 1;
+  padding: 0.1vw 3vw;
+  margin: 1vw;
+  border-radius: 0.2vw;
+  border: 0.1vw solid aliceblue;
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 2vw;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0);
+  text-align: left;
+  white-space: nowrap;
+  color: #fff;
+  background: transparent;
+}
+.game-area .game-board {
+  display: none;
+}
+.game-area .game-board.visible {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 2vw;
+  margin: 3vw;
+  justify-content: center;
+}
+.game-area .game-board.visible .game-info {
+  font-size: 3vw;
+  grid-column: 1/-1;
+  text-align: center;
+}
+.game-area .game-board.visible .card {
+  position: relative;
+  background-color: transparent;
+  height: 18vw;
+  width: 12vw;
+}
+.game-area .game-board.visible .card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2vw;
+  border-width: 0.1vw;
+  border-style: solid;
+  background-color: grey;
+  border-color: grey;
+}
+.game-area .game-board.visible .card-face :hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2vw;
+  border-width: 0.1vw;
+  background-color: blue;
+  border-color: blue;
+}
+.game-area .game-board.visible .card-face.help-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2 vw;
+  border-width: 0.5vw;
+  background-color: green;
+  border-color: green;
+}
+.game-area .game-board.visible .card-face.selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2 vw;
+  border-width: 0.5vw;
+  background-color: red;
+  border-color: red;
+}
+.game-area .game-board.visible .card-img {
+  position: absolute;
+  width: 12vw;
+  height: 18vw;
+  top: 0;
+  left: 0;
+}
+.game-area .game-table {
+  display: none;
+}
+.game-area .game-table.visible {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 2vw;
+  margin: 3vw;
+  justify-content: center;
+}
+.game-area .game-table.visible .score {
+  text-align: center;
+  font-size: 3vw;
+}
+.game-area .end-screen {
+  display: none;
+}
+.game-area .end-screen.visible {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-gap: 0.1vw;
+  margin: 3vw;
+  justify-content: center;
+  font-size: 4vw;
+}
+.game-area .top-list-easy {
+  display: none;
+}
+.game-area .top-list-easy.visible {
+  display: inline;
+}
+.game-area .top-list-hard {
+  display: none;
+}
+.game-area .top-list-hard.visible {
+  display: inline;
+}
+.game-area .top-list-multiplayer {
+  display: none;
+}
+.game-area .top-list-multiplayer.visible {
+  display: inline;
+}

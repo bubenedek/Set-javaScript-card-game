@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dist/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+    <script type = "module" src = "js/index.js"></script>
+    <title>SET</title>
+</head>
+<body>
+    <h1 class= "page-title">SET CARD GAME</h1>
+    <div class = "game-area">
+        <div class = "menu">
+            <div class = "main-menu visible">
+                <input type="button" id = "playBtn" value="PLAY">
+                <input type="button" id = "rulesBtn" value="RULES">
+                <input type="button" id = "topListEasyBtn" value="Scoreboard Easy">
+                <input type="button" id = "topListHardBtn" value="Scoreboard Hard">
+                <input type="button" id = "topListMultiplayerBtn" value="Scoreboard Multiplayer">
+            </div>
+            <div class = "rules">
+                <iframe src="http://magliery.com/Set/SetRules.html" width = "1024" height = "768"></iframe>
+            </div>
+            <div class = "top-list-easy">
+                <h2>Easy Game Top List</h2>
+                <table>
+                    <th>Place</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                    <tr><td>1.</td><td>6</td><td>60</td></tr>
+                </table>
+                <input type="button" id = "backEasyBtn" value="Main Menu">
+            </div>
+            <div class = "top-list-hard">
+                <h2>Hard Game Top List</h2>
+                <table>
+                    <th>Place</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                    <tr><td>1.</td><td>6</td><td>60</td></tr>
+                </table>
+                <input type="button" id = "backHardBtn" value="Main Menu">
+            </div>
+            <div class = "top-list-multiplayer">
+                <h2>Multiplayer Game Top List</h2>
+                <table>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                    <tr><td>1.</td><td>Player1</td><td>6</td><td>60</td></tr>
+                </table>
+                <input type="button" id = "backMultiplayerBtn" value="Main Menu">
+            </div>
+            <div class = "play-menu">
+                <p>The number of players</p>
+                <div class = "players-radio">
+                    <input type="radio" id = "radio1" name = "playersNum" value="1">
+                    <label for="radio1">1</label>
+                    <input type="radio" id = "radio2" name = "playersNum" value="2">
+                    <label for="radio2">2</label>
+                    <input type="radio" id = "radio3" name = "playersNum" value="3">
+                    <label for="radio3">3</label>
+                    <input type="radio" id = "radio4" name = "playersNum" value="4">
+                    <label for="radio4">4</label>
+                    <input type="radio" id = "radio5" name = "playersNum" value="5">
+                    <label for="radio5">5</label>
+                    <input type="radio" id = "radio6" name = "playersNum" value="6">
+                    <label for="radio6">6</label>
+                    <input type="radio" id = "radio7" name = "playersNum" value="7">
+                    <label for="radio7">7</label>
+                    <input type="radio" id = "radio8" name = "playersNum" value="8">
+                    <label for="radio8">8</label>
+                    <input type="radio" id = "radio9" name = "playersNum" value="9">
+                    <label for="radio9">9</label>
+                    <input type="radio" id = "radio10" name = "playersNum" value="10">
+                    <label for="radio10">10</label>
+                </div>
+                <div class = "players-name">
+                    <input type="textarea" name = "playersName" id="player1" value="Player1"></input>
+                    <input type="textarea" name = "playersName" id="player2" value="Player2"></input>
+                    <input type="textarea" name = "playersName" id="player3" value="Player3"></input>
+                    <input type="textarea" name = "playersName" id="player4" value="Player4"></input>
+                    <input type="textarea" name = "playersName" id="player5" value="Player5"></input>
+                    <input type="textarea" name = "playersName" id="player6" value="Player6"></input>
+                    <input type="textarea" name = "playersName" id="player7" value="Player7"></input>
+                    <input type="textarea" name = "playersName" id="player8" value="Player8"></input>
+                    <input type="textarea" name = "playersName" id="player9" value="Player9"></input>
+                    <input type="textarea" name = "playersName" id="player10" value="Player10"></input>
+                </div>
+                <p>Game Mode</p>
+                <div class = "game-mode">
+                    <input type="radio" id = "gm1" name = "gm" value = "1">
+                    <label for="gm1">Training</label>
+                    <input type="radio" id = "gm2" name = "gm" value = "2">
+                    <label for="gm2">Competitive</label>
+                </div>
+                <p>Difficulty</p>
+                <div class = "game-difficulty">
+                    <input type="radio" id = "gd1" name = "gd" value = "1">
+                    <label for="gd1">Easy</label>
+                    <input type="radio" id = "gd2" name = "gd" value = "2">
+                    <label for="gd2">Hard</label>
+                </div>
+                <div class = "next">
+                    <input type="button" id = "nextBtn" value="NEXT">
+                </div>
+            </div>
+            <div class = "other-options">
+                <div class = "is-set">
+                    <input type="checkbox" id = "is-set">
+                    <label for="is-set">IsSet Button</label>
+                </div>
+                <div class = "show-set">
+                    <input type="checkbox" id = "show-set">
+                    <label for="show-set">Set button</label>
+                </div>
+                <div class = "manual-three">
+                    <input type="checkbox" id = "manual-three">
+                    <label for="manual-three">Manual card add</label>
+                </div>
+            </div>
+            <div class = "start">
+                <input type="button" id = "startBtn" value="START">
+            </div>
+        </div>
+        <div class = "game-table">
+            <div class = "other-buttons">
+                    <div class = "contains-set">
+                        <input type="button" id = "isCSetBtn" value="Is Containing Set">
+                    </div>
+                    <div class = "contains-set-txt">
+                    </div>
+                    <div class = "find-set">
+                        <input type="button" id = "findSetBtn" value="Find Set">
+                    </div>
+                    <div class = "add-three">
+                        <input type="button" id = "addThreeBtn" value="Open 3 Cards">
+                    </div>
+            </div>
+            <div class = "score">
+                Score: 
+                <span class = "score-value" ></span>
+            </div>
+
+        </div>
+            <div class = "game-board">
+        </div>
+        <div class = "end-screen">
+            <h2>Game Over!</h2>
+            <h3>Your final score is:</h3>
+            <span class = "final-score"></span>
+            <input type="button" class = "toMainMenuBtn" value="Main Menu">
+        </div>
+    </div>
+        
+</body>
+</html>
